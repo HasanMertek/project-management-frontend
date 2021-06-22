@@ -1,3 +1,6 @@
-<ul *ngFor="let department of departments" class="list-group list-group-flush">
-    <li class="list-group-item">{{department.name}}</li>
+<div class="single category">
+  <a routerLink="/employees" href=""><h3 class="side-title" >Department</h3></a>
+  <ul class="list-unstyled" >
+    <li><a href="" title="" *ngFor="let department of departments" routerLink="/employees/department/{{department.id}}">{{department.name}} </a></li>
   </ul>
+ </div>

@@ -1,10 +1,10 @@
-export interface Employee {
+export interface EmployeeDto{
   id: number;
   departmentId: number;
-  firstName: string;
-  lastName: string;
+  departmentName:string;
+  name: string;
   email: string;
   salary: number;
-  isActive: boolean;
   imagePath:string;
+ 
 }

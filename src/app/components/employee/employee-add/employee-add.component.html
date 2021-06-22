@@ -1,0 +1,96 @@
+
+<div class="content addForm mt-5">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Employee Add Form</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="employeeAddForm">
+                  
+                    <div class="mb-3">
+                        <label for="addDepartmentId">
+                            Department
+                        </label>
+                        <div class="form-group">
+                            <select  id="addDepartmentId" class="form-select" formControlName="departmentId">
+                               
+                                <option [value]="department.id" *ngFor="let department of departments">
+                                    {{department.name}}
+                                </option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="addFirstName">
+                            FirstName
+                        </label>
+                        <div class="form-group">
+                            <input type="text" id="addFirstName" formControlName="firstName" class="form-control" placeholder="FirstName...">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addLastName">
+                            LastName
+                        </label>
+                        <div class="form-group">
+                            <input type="text" id="addLastName" formControlName="lastName" class="form-control" placeholder="LastName...">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addEmail">
+                            Email
+                        </label>
+                        <div class="form-group">
+                            <input type="text" id="addEmail" formControlName="email" class="form-control" placeholder="Email...">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addSalary">
+                            Salary
+                        </label>
+                        <div class="form-group">
+                            <input type="text" id="addSalary" formControlName="salary" class="form-control" placeholder="Salary...">
+                        </div>
+                    </div>
+                </form>
+            </div>
+<div class="card-footer justify-content-end d-flex">
+    <button class="btn btn-primary btn-fill btn-lg"  (click)="add()">
+        Add Employee
+    </button>
+</div>
+        </div> 
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

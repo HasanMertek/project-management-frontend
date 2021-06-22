@@ -3,6 +3,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { EmployeeAddComponent } from './components/employee/employee-add/employee-add.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,14 @@ const routes: Routes = [
     path:'employees',
     component:EmployeeComponent
   },
+  {
+    path:'employees/department/:departmentId',
+    component:EmployeeComponent
+  },
+  {
+    path:'employees/add',
+    component:EmployeeAddComponent
+  }
 ];
 
 @NgModule({

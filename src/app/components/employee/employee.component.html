@@ -1,63 +1,53 @@
 <div class="container">
-  <div class="row">
-    <div class="col-3 mt-5">
-      <app-department></app-department>
-    </div>
-    <div class="col-9">
-      <div class="px-3 py-2 border-bottom mb-3">
-        <div class="container d-flex flex-wrap justify-content-center">
-          <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search..."
-            />
-          </form>
-
-          <div class="text-end">
-            <button type="button" class="btn btn-light text-dark me-2">
-              Login
-            </button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
-          </div>
-        </div>
-      </div>
-      <div class="container mt-2">
+  <div class="px-3 py-2 border-bottom mb-3">
+    <div class="container d-flex flex-wrap justify-content-center align-items-center">
+      <div class="col-12 col-lg-auto  me-lg-middle">
         <input
-        type="text"
-        [(ngModel)]="filterText"
-        id="firstName"
-        class="form-control"
-        placeholder="Search..."
-      />
-        <table class="table table-dark table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Department</th>
-              <th scope="col">FirstName</th>
-              <th scope="col">LastName</th>
-              <th scope="col">Email</th>
-              <th scope="col">Salary</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              *ngFor="
-                let employee of employees | filterPipeEmployee: filterText
-              "
-              class="align-middle"
-            >
-              <td>{{ employee.id }}</td>
-              <td>{{ employee.departmentId }}</td>
-              <td>{{ employee.firstName }}</td>
-              <td>{{ employee.lastName }}</td>
-              <td>{{ employee.email }}</td>
-              <td>{{ employee.salary }}</td>
-            </tr>
-          </tbody>
-        </table>
+          type="text"
+          [(ngModel)]="filterText"
+          id="filterText"
+          class="form-control"
+          placeholder="Search Employee..."
+        />
       </div>
     </div>
   </div>
-</div>
+  <div class="row">
+    <div class="col-3">
+      <app-department></app-department>
+    </div>
+    <div class="col-9">
+      <div class="content row">
+        <div
+          *ngFor="let employee of employees | filterPipeEmployee: filterText"
+          class="card mx-auto mt-3 bg-light rounded-2 shadow overflow-hidden"
+          style="width: 14rem"
+        >
+          <div
+            class="card-header card-img d-flex justify-content-end align-items-center cursor-pointer mt-2 bg-light"
+          >
+            <h5><span class="badge bg-primary text-dark findex">{{ employee.name }}</span></h5>
+          </div>
+          <div
+            class="card-img d-flex justify-content-center align-items-center cursor-pointer mt-2"
+          >
+            <img
+              class="card-img-top"
+              width="auto"
+              height="150px"
+              src="{{employee.imagePath}}"
+            />
+          </div>
+      
+          <div class="card-body">
+            <h5 class="card-title">{{ employee.id }}</h5>
+            <h6>{{ employee.departmentName }}</h6>
+            <h6>{{ employee.email }}</h6>
+            <h6>{{ employee.salary | currency: "₺"}}</h6>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+

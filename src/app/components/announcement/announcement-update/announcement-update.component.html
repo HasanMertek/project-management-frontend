@@ -1,0 +1,45 @@
+<div  class="content addForm mt-5">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Announcement Update Form</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="announcementUpdateForm">
+                    
+                   
+                    <div class="mb-3">
+                        <label for="updateDescription">
+                            Description
+                        </label>
+                        <div class="form-group" >
+                            <input  type="text" id="updateDescription" formControlName="description" class="form-control" placeholder="Description...">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="updateTitle">
+                            Title
+                        </label>
+                        <div class="form-group">
+                            <input type="text" id="updateTitle" formControlName="title" class="form-control" placeholder="Title...">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="updateNotice">
+                            Notice
+                        </label>
+                        <div class="form-group">
+                            <input type="text" id="updateNotice" formControlName="notice" class="form-control" placeholder="Notice...">
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+<div class="card-footer justify-content-end d-flex">
+    <button class="btn btn-primary btn-fill btn-lg " routerLink="/dashboard/announcements"  (click)="update()">
+        Update Announcement
+    </button>
+</div>
+        </div> 
+    </div>
+</div>

@@ -1,0 +1,76 @@
+
+<div class="content addForm mt-5">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Announcement Add Form</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="announcementAddForm">
+                    <div class="mb-3">
+                        <label for="addTitle">
+                            Title
+                        </label>
+                        <div class="form-group">
+                            <input type="text" id="addTitle" formControlName="title" class="form-control" placeholder="Title...">
+                        </div>
+                    </div>
+                   
+                    <div class="mb-3">
+                        <label for="addDescription">
+                            Description
+                        </label>
+                        <div class="form-group">
+                            <input type="text" id="addDescription" formControlName="description" class="form-control" placeholder="Description..">
+                        </div>
+                    </div>
+                   
+                    <div class="mb-3">
+                        <label for="addNotice">
+                            Notice
+                        </label>
+                        <div class="form-group">
+                            <input type="text" id="addNotice" formControlName="notice" class="form-control" placeholder="Notice...">
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+<div class="card-footer justify-content-end d-flex">
+    <button class="btn btn-primary btn-fill btn-lg " routerLink="/dashboard/announcements"  (click)="add()">
+        Add Announcement
+    </button>
+</div>
+        </div> 
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

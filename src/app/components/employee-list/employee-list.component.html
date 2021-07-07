@@ -1,0 +1,14 @@
+<div class="container sc" style="height: 80vh;">
+<div class="card sc" > <div class="card-body">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let employee of employees | filterPipeEmployee: filterText"><i class="fas fa-user-circle"></i> {{employee.name}}</li>
+        
+      </ul>
+      
+</div>
+<div class="card-footer">
+    <input type="text"[(ngModel)]="filterText" id="employeeName" placeholder="Search Employee" >
+</div>
+</div>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="content addForm mt-5">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">Department Add Form</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="departmentAddForm">
+                    <div class="mb-3">
+                      <label for="departmentName">Department Name</label>
+                      <div class="form-group">
+                          <input class="form-control" placeholder="Department Name" type="text" id="departmentName" formControlName="name" >
+                      </div>  
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer justify-content-end d-flex">
+                <button class="btn btn-primary btn-fill btn-lg" routerLink="/dashboard/departments" (click)="add()">Add</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container"  style="height: 80vh;">
+    <div class="card " *ngFor='let announcement of announcements'>
+        <h4 class="card-header"><span class="badge bg-danger">{{announcement.title}}</span></h4>
+        <div class="card-body">
+          
+          <p class="card-text">{{announcement.description}}</p>
+          <span class="card-footer badge bg-secondary">{{announcement.date}}</span>
+        </div>
+      </div>
+      
+</div>
+

@@ -1,0 +1,29 @@
+<div class="tab-pane fade show active container-sm mt-5">
+    <div class="d-flex justify-content-start"><button class="btn btn-light" routerLink="/dashboard"><i class="fas fa-arrow-left"></i></button></div>
+    <div  class="mb-2 d-flex justify-content-end"><button routerLink="/tasks/add" class="btn btn-primary mx-5">Add Task</button></div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">EMPLOYEE ID</th>
+          <th scope="col">DESCRIPTION</th>
+          <th scope="col">END DATE</th>
+          <th scope="col">UPDATE</th>
+          <th scope="col">DELETE</th>
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          
+          <td>{{task.id}}</td>
+          <td>{{task.employeeId}}</td>
+          <td>{{task.description}}</td>
+          <td>{{task.endDate}}</td>
+          
+          <td><button class="btn btn-outline-primary"><i class="fas fa-edit"></i></button></td>
+          <td><button (click)="deleteTask(task)" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>
+        
+      </tbody>
+    </table></div>

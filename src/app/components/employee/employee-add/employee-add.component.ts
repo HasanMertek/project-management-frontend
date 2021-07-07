@@ -35,7 +35,7 @@ export class EmployeeAddComponent implements OnInit {
      firstName:["",Validators.required],
      lastName:["",Validators.required],
      email:["",Validators.required],
-        salary:["",Validators.required],
+      salary:["",Validators.required],
 
    })
  }
@@ -47,6 +47,7 @@ export class EmployeeAddComponent implements OnInit {
        employeeModel.salary=Number(employeeModel.salary.toString());
        this.employeeService.add(employeeModel).subscribe(response=>{
          this.toastr.success(response.message,'success')
+         window.location.reload();
          
        })
       

@@ -1,0 +1,14 @@
+
+    <div class="container" style="height: 80vh;">
+    <div class="card" *ngFor="let task of tasks"  >
+        <h4 class="card-header"><span class="badge bg-success">{{task.department}}</span></h4>
+        <div class="card-body">
+          <h5 class="card-title">{{task.employeeName}}</h5>
+          <p class="card-text">{{task.description}}</p>
+          
+        </div>
+      </div>
+    </div>
+    
+      
+

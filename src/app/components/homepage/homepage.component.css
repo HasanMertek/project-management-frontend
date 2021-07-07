@@ -34,6 +34,7 @@
     border-radius: 21px;
     transform: rotate(30deg);
   }
+ 
   
   .product-device::before {
     position: absolute;

@@ -1,0 +1,25 @@
+<div class="content addForm mt-5">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">
+                    Department Update Form
+                </h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="departmentUpdateForm">
+                    <div class="mb-3">
+                        <label for="departmentNameUpdate">Department Name</label>
+                        <div class="form-group"  *ngIf="department">
+                            <input type="text" id="departmentNameUpdate" formControlName="name" class="form-control">
+                        </div>
+                    </div>
+
+                </form>              
+            </div>
+            <div class="card-footer justify-content-end d-flex">
+                <button class="btn btn-primary btn-fill btn-lg" routerLink="/dashboard/departments" (click)="update()">Update</button>
+            </div>
+        </div>
+    </div>
+</div>

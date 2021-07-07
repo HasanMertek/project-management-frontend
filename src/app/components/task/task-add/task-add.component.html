@@ -1,0 +1,80 @@
+
+<div class="content addForm mt-5">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Task Add Form</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="taskAddForm">
+                  
+                    <div class="mb-3">
+                        <label for="addEmployeeId">
+                            Employee
+                        </label>
+                        <div class="form-group">
+                            <select  id="addEmployeeId" class="form-select" formControlName="employeeId">
+                               
+                                <option [value]="employee.id" *ngFor="let employee of employees">
+                                    {{employee.firstName}} {{employee.lastName}}
+                                </option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="addDescription">
+                            Description
+                        </label>
+                        <div class="form-group">
+                            <input type="text" id="addDescription" formControlName="description" class="form-control" placeholder="Description...">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addEndDate">
+                            End Date
+                        </label>
+                        <div class="form-group">
+                            <input type="date" id="addEndDate" formControlName="endDate" class="form-control">
+                        </div>
+                    </div>                   
+                </form>
+            </div>
+<div class="card-footer justify-content-end d-flex">
+    <button class="btn btn-primary btn-fill btn-lg " routerLink="/dashboard/tasks"  (click)="add()">
+        Add Task
+    </button>
+</div>
+        </div> 
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

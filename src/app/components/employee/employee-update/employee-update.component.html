@@ -1,19 +1,18 @@
-
-<div class="content addForm mt-5">
+<div  class="content addForm mt-5">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h5>Employee Add Form</h5>
+                <h5>Employee Update Form</h5>
             </div>
             <div class="card-body">
-                <form [formGroup]="employeeAddForm">
-                  
+                <form [formGroup]="employeeUpdateForm">
+                    
                     <div class="mb-3">
-                        <label for="addDepartmentId">
+                        <label for="updateDepartmentId">
                             Department
                         </label>
                         <div class="form-group">
-                            <select  id="addDepartmentId" class="form-select" formControlName="departmentId">
+                            <select  id="updateDepartmentId" class="form-select" formControlName="departmentId">
                                
                                 <option [value]="department.id" *ngFor="let department of departments">
                                     {{department.name}}
@@ -23,74 +22,44 @@
                         
                     </div>
                     <div class="mb-3">
-                        <label for="addFirstName">
+                        <label for="updateFirstName">
                             FirstName
                         </label>
-                        <div class="form-group">
-                            <input type="text" id="addFirstName" formControlName="firstName" class="form-control" placeholder="FirstName...">
+                        <div class="form-group" >
+                            <input  type="text" id="updateFirstName" formControlName="firstName" class="form-control" placeholder="FirstName...">
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="addLastName">
+                        <label for="updateLastName">
                             LastName
                         </label>
                         <div class="form-group">
-                            <input type="text" id="addLastName" formControlName="lastName" class="form-control" placeholder="LastName...">
+                            <input type="text" id="updateLastName" formControlName="lastName" class="form-control" placeholder="LastName...">
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="addEmail">
+                        <label for="updateEmail">
                             Email
                         </label>
                         <div class="form-group">
-                            <input type="text" id="addEmail" formControlName="email" class="form-control" placeholder="Email...">
+                            <input type="text" id="updateEmail" formControlName="email" class="form-control" placeholder="Email...">
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="addSalary">
+                        <label for="updateSalary">
                             Salary
                         </label>
                         <div class="form-group">
-                            <input type="text" id="addSalary" formControlName="salary" class="form-control" placeholder="Salary...">
+                            <input type="text" id="updateSalary" formControlName="salary" class="form-control" placeholder="Salary...">
                         </div>
                     </div>
                 </form>
             </div>
 <div class="card-footer justify-content-end d-flex">
-    <button class="btn btn-primary btn-fill btn-lg " routerLink="/dashboard/employees"  (click)="add()">
-        Add Employee
+    <button class="btn btn-primary btn-fill btn-lg " routerLink="/dashboard/employees"  (click)="update()">
+        Update Employee
     </button>
 </div>
         </div> 
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
